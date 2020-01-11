@@ -1,11 +1,17 @@
 {
-  "name": "ts-lib",
+  "name": "ts-cli",
   "version": "1.0.0",
   "description": "",
+
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "preferGlobal": true,
+  "bin": {
+    "ts-cli": "./bin/ts-cli.js"
+  },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
@@ -24,6 +30,9 @@
     "url": "https://github.com/JeanMGirard/ts-lib/issues"
   },
   "homepage": "https://github.com/JeanMGirard/ts-lib#readme",
+  "dependencies": {
+    "commander": "^4.1.0"
+  },
   "devDependencies": {
     "@types/node": "^13.1.6",
     "tslint": "^5.20.1",
